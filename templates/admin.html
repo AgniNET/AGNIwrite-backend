@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+</head>
+<body>
+  <h1>Pending Submissions</h1>
+  {% for item in items %}
+    <div style="border:1px solid #ccc; padding:10px; margin:10px;">
+      <h3>{{ item[1] }} ({{ item[2] }})</h3>
+      <p>{{ item[3] }}</p>
+      <a href="/approve/{{ item[0] }}">✅ Approve</a> |
+      <a href="/reject/{{ item[0] }}">❌ Reject</a>
+    </div>
+  {% endfor %}
+</body>
+</html>
